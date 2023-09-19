@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block menu %}
+    <a class="nav-link menu m-3 col-1 text-center" href="{% url 'home' %}">Главная</a>
+{% endblock menu %}
+
+{% block content %}
+    <section class="m-xxl-5 p-5">
+        <section class="row">
+            <section id="left" class="m-2 p-2 col-4">
+                <div>
+                    <div class="m-1 p-1">
+                        <img src="{% static data.img_path %}"
+                             alt="person-img"
+                             style="border: 5px solid {{ data.color }}; border-radius: 10%">
+                    </div>
+                    <div class="column m-1 p-1">
+                        <table>
+                            {% for key, value in data.page_content.items %}
+                                <tr>
+                                    <td>{{ key }}</td>
+                                    <td>{{ value }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="central" class="m-2 p-2 col-4">
+                <div class="mt-4 p-5 bg-light text-dark rounded">
+                    <h2>LOREM</h2>
+                    <p>{% lorem %}</p>
+                </div>
+                <div class="mt-4 p-5 bg-light text-dark rounded">
+                    <h2>LOREM</h2>
+                    <p>{% lorem %}</p>
+                </div>
+                <div class="mt-4 p-5 bg-light text-dark rounded">
+                    <h2>LOREM</h2>
+                    <p>{% lorem %}</p>
+                </div>
+            </section>
+            <section id="right" class="m-2 p-2 col-3">
+                <div class="mt-4 p-5 bg-light text-dark rounded">
+                    <p>{{ data.text }}</p>
+                </div>
+            </section>
+        </section>
+    </section>
+{% endblock content %}

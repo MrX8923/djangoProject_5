@@ -1,0 +1,25 @@
+body {
+  font-family: "Century Gothic", "Times New Roman", sans-serif;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  /*background-image: url("../img/fon.jpg");*/
+  background-color: black;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+.menu {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  border: double 5px red;
+  border-radius: 10%;
+  transition: linear 0.7s;
+}
+
+.menu:hover {
+  border-radius: 50%;
+  color: red;
+  text-shadow: red 0 0 35px;
+  box-shadow: red 0 0 35px;
+}
